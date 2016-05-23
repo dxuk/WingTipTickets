@@ -1,0 +1,9 @@
+{
+  "name": "StorageLinkedService",
+  "properties": {
+    "type": "AzureStorage",
+    "typeProperties": {
+      "connectionString": "DefaultEndpointsProtocol=https;AccountName=jjctestdeployment1992;AccountKey=8U54bP4elXoTqLGHGjQTl8pw8NTGH1SyxeErb1g61klbjqKZn0wCqV/OVWoMU2tAu8Q5ZjuVanS7LSTsUn97Uw=="
+    }
+  }
+}

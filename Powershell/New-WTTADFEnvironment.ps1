@@ -116,7 +116,7 @@ function RegisterProvider()
 function GetStorageAccountKey()
 {
 	# Get Storage Account Primary Key
-	$storageAccountkey = (Get-AzureRMStorageAccountKey -ResourceGroupName $ResourceGroupName -storageAccountName $ApplicationName).Value[0]
+	$storageAccountkey = (Get-AzureRMStorageAccountKey -ResourceGroupName $ResourceGroupName -storageAccountName $ApplicationName).Key1
 
 	return $storageAccountKey
 }
@@ -248,7 +248,7 @@ function CreateDataFactory()
 	{
 		# Create DataFactory
 		WriteLabel("Creating Data Factory '$ApplicationName'")
-		$dataFactory = New-AzureRMDataFactory -Name $ApplicationName -location 'West US' -ResourceGroupName $ResourceGroupName -Force -ErrorAction SilentlyContinue
+		$dataFactory = New-AzureRMDataFactory -Name $ApplicationName -location 'East US' -ResourceGroupName $ResourceGroupName -Force -ErrorAction SilentlyContinue
         if($dataFactory -eq $null)
         {
             WriteValue("Failed")
